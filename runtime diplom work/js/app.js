@@ -4,8 +4,6 @@ $(function() {
         introH = $("#intro").innerHeight(),
         scrollOffset = $(window).scrollTop();
 
-
-    /* Fixed Header */
     checkScroll(scrollOffset);
 
     $(window).on("scroll", function() {
@@ -13,6 +11,8 @@ $(function() {
 
         checkScroll(scrollOffset);
     });
+
+    /*-*/
 
     function checkScroll(scrollOffset) {
         if( scrollOffset >= introH ) {
@@ -22,9 +22,8 @@ $(function() {
         }
     }
 
+    /*-*/
 
-
-    /* Smooth scroll */
     $("[data-scroll]").on("click", function(event) {
         event.preventDefault();
 
@@ -40,9 +39,8 @@ $(function() {
         }, 500);
     });
 
+/*-*/
 
-
-    /* Menu nav toggle */
     $("#nav_toggle").on("click", function(event) {
         event.preventDefault();
 
@@ -51,8 +49,6 @@ $(function() {
     });
 
 
-
-    /* Collapse */
     $("[data-collapse]").on("click", function(event) {
         event.preventDefault();
 
@@ -62,8 +58,8 @@ $(function() {
         $this.toggleClass("active");
     });
 
+/*-*/
 
-    /* Slider */
     $("[data-slider]").slick({
         infinite: true,
         fade: false,
